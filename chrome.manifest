@@ -1,0 +1,4 @@
+content html_entities jar:chrome/html_entities.jar!/content/ xpcnativewrappers=yes
+overlay chrome://komodo/content/komodo.xul chrome://html_entities/content/overlay.xul
+
+skin	html_entities	classic/1.0	jar:chrome/html_entities.jar!/skin/

@@ -1,0 +1,107 @@
+﻿<?xml version="1.0"?>
+<!-- Copyright (c) 2007 Jan Cerny <chemix@chemix.cz> -->
+<!-- See the file LICENSE.txt for licensing information. -->
+<!DOCTYPE overlay PUBLIC "-//MOZILLA//DTD XUL V1.0//EN" "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://komodo/skin/global/global.css" type="text/css"?>
+<!-- <xml-stylesheet href="chrome://html_entities/skin/html_entities.css" type="text/css"?> -->
+
+<overlay id="test_pyXPCOM_overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+    <script type="application/x-javascript" src="chrome://komodo/content/project/projectManager.js"/>
+    <script type="application/x-javascript" src="chrome://komodo/content/views.js"/>
+    <script type="application/x-javascript" src="chrome://komodo/content/library/open.js"/>
+
+    <script type="application/x-javascript" src="chrome://html_entities/content/html_entities.js"/>
+    <style>
+        .khe-button {
+            border: 1px solid red;
+            width: 20px;
+            min-width: 20px;
+        }
+    </style>
+<!-- START Menu View	-->
+    <menupopup id="menu_view_tabs_popup">
+        <menuitem id="show_html_entities_tab2"
+            insertafter="show_codebrowser_tab2"
+            class="menuitem-iconic-wide"
+            oncommand="uilayout_ensureTabShown('html_entities_tab', true)"
+            label="HTML Entities"
+            />&quot;
+    </menupopup>
+
+    <menupopup id="tabPicker_popup">
+        <menuitem id="show_html_entities_tab"
+            insertafter="show_codebrowser_tab"
+            oncommand="uilayout_ensureTabShown('html_entities_tab', true)"
+            label="HTML Entities"
+            />
+    </menupopup>
+
+<!-- END Menu View	-->
+
+
+    <tabs id="project_toolbox_tabs">
+        <tab id="html_entities_tab" label="HTML Entities" insertafter="codebrowser_tab"
+             tooltiptext="HTML Entities"/>
+    </tabs>
+    <tabpanels id="project_toolbox_tabpanels">
+        <tabpanel flex="1" id="html_entity-viewbox" insertafter="codebrowserviewbox">
+            <vbox flex="1" id="html_entity-vbox">
+                <vbox flex="1">
+                    <hbox align="center" id="html_entity-tabpanel-hbox">
+                        <checkbox
+                            id="html_entity-number-button"
+                            tooltiptext="Use numbered entities (not use named entity)"
+                            label="Use numbered entity"
+                            checked="false"
+                            oncommand="NumberOrName();"
+                            />
+                    </hbox>
+
+                    <groupbox>
+                    <caption label="data in the rows" />
+                    <grid>
+                      <columns>
+                        <column flex="0" />
+                        <column flex="0" />
+                        <column flex="0" />
+                        <column flex="0" />
+                      </columns>
+
+                      <rows>
+                        <row>
+                          <button flex="0" class="khe-button" label="&quot;" tooltiptext="quotation mark" oncommand="html_entity_insert('quot',34);" />
+                          <button class="khe-button" label="&amp;" tooltiptext="ampersand" oncommand="html_entity_insert('amp',38);" />
+                          <button class="khe-button" label="&lt;" tooltiptext="less-than" oncommand="html_entity_insert('lt',60);" />
+                          <button class="khe-button" label="&gt;" tooltiptext="greater-than" oncommand="html_entity_insert('gt',62);" />
+                        </row>
+                        <row>
+                          <button label="' '" tooltiptext="quotation mark" oncommand="html_entity_insert('nbsp;',160);" />
+						  <button label="¡" tooltiptext="inverted exclamation mark" oncommand="html_entity_insert('iexcl',161);" />
+                          <button label="¤" tooltiptext="currency" oncommand="html_entity_insert('curren',164);" />
+                          <button label="¢" tooltiptext="cent" oncommand="html_entity_insert('cent',162);" />
+                        </row>
+                        <row>
+                          <button label="£" tooltiptext="pound" oncommand="html_entity_insert('pound',163);" />
+						  <button label="¥" tooltiptext="yen" oncommand="html_entity_insert('yen',165);" />
+                          <button label="¦" tooltiptext="broken vertical bar" oncommand="html_entity_insert('brvbar',166);" />
+                          <button label="§" tooltiptext="section" oncommand="html_entity_insert('sect',167);" />
+                        </row>
+
+
+
+                      </rows>
+                    </grid>
+                    </groupbox>
+
+
+
+                </vbox>
+            </vbox>
+        </tabpanel>
+    </tabpanels>
+
+
+</overlay>
