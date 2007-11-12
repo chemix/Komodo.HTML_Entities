@@ -1,10 +1,6 @@
-const XXX = 7;
-
-var what = null;
-
+// Pref Service
 gPrefSvc = Components.classes["@activestate.com/koPrefService;1"].
                       getService(Components.interfaces.koIPrefService);
-
 
 function NumberOrName()
 {
@@ -67,20 +63,34 @@ function html_entity_insert ( v_string , v_integer )
         var newCurrentPos = scimoz.currentPos + entity.length;
         scimoz.currentPos = newCurrentPos;
         scimoz.anchor = newCurrentPos;
-        scimoz.focus();
     } catch (e) {
         alert(e);
     }
+
+    // Focus
+    try {
+        ko.views.manager.currentView.setFocus()
+    } catch (e){
+        alert(e);
+    }
+
     // alert(v_integer + ' == ' + v_string);
 }
 
 
-try {
-    if (gPrefSvc.prefs.hasPref("kHTML_Entities")){
-        numButton = document.getElementById('html_entity-number-button');
-        is_number = gPrefSvc.prefs.getBooleanPref("kHTML_Entities");
-        numButton.checked = is_number;
+
+function kHTML_Entitis_Init()
+{
+    try {
+        if (gPrefSvc.prefs.hasPref("kHTML_Entities")){
+            numButton = document.getElementById('html_entity-number-button');
+            is_number = gPrefSvc.prefs.getBooleanPref("kHTML_Entities");
+            numButton.checked = is_number;
+        }
+    } catch (e){
+        alert(e);
     }
-} catch (e){
-    alert(e);
 }
+
+// Ensure we load the remote server information when the overlay is loaded.
+addEventListener("load", kHTML_Entitis_Init, false);
