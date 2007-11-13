@@ -4,23 +4,18 @@
 <!DOCTYPE overlay PUBLIC "-//MOZILLA//DTD XUL V1.0//EN" "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
 <?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
 <?xml-stylesheet href="chrome://komodo/skin/global/global.css" type="text/css"?>
-<!-- <xml-stylesheet href="chrome://html_entities/skin/html_entities.css" type="text/css"?> -->
+<?xml-stylesheet href="chrome://html_entities/skin/html_entities.css" type="text/css"?>
 
-<overlay id="test_pyXPCOM_overlay"
-         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<overlay id="html_entities_overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+         xmlns:html = "http://www.w3.org/1999/xhtml"
+         >
 
-    <script type="application/x-javascript" src="chrome://komodo/content/project/projectManager.js"/>
+
     <script type="application/x-javascript" src="chrome://komodo/content/views.js"/>
     <script type="application/x-javascript" src="chrome://komodo/content/library/open.js"/>
 
     <script type="application/x-javascript" src="chrome://html_entities/content/html_entities.js"/>
-    <style>
-        .khe-button {
-            border: 1px solid red;
-            width: 20px;
-            min-width: 20px;
-        }
-    </style>
 <!-- START Menu View	-->
     <menupopup id="menu_view_tabs_popup">
         <menuitem id="show_html_entities_tab2"
@@ -61,43 +56,27 @@
                     </hbox>
 
                     <groupbox>
-                    <caption label="data in the rows" />
-                    <grid>
-                      <columns>
-                        <column flex="0" />
-                        <column flex="0" />
-                        <column flex="0" />
-                        <column flex="0" />
-                      </columns>
+                        <caption label="HTML Entities" />
+                        <box >
+                            <html:a class="html_entity-item" tooltiptext="quotation mark" onclick="html_entity_insert('quot',34);" >&quot;</html:a>
+                            <html:a class="html_entity-item" tooltiptext="ampersand" onclick="html_entity_insert('amp',38);" >&amp;</html:a>
+                            <html:a class="html_entity-item" tooltiptext="less-than" onclick="html_entity_insert('lt',60);" >&lt;</html:a>
+                            <html:a class="html_entity-item" tooltiptext="greater-than" onclick="html_entity_insert('lt',62);" >&gt;</html:a>
 
-                      <rows>
-                        <row>
-                          <button flex="0" class="khe-button" label="&quot;" tooltiptext="quotation mark" oncommand="html_entity_insert('quot',34);" />
-                          <button class="khe-button" label="&amp;" tooltiptext="ampersand" oncommand="html_entity_insert('amp',38);" />
-                          <button class="khe-button" label="&lt;" tooltiptext="less-than" oncommand="html_entity_insert('lt',60);" />
-                          <button class="khe-button" label="&gt;" tooltiptext="greater-than" oncommand="html_entity_insert('gt',62);" />
-                        </row>
-                        <row>
-                          <button label="' '" tooltiptext="quotation mark" oncommand="html_entity_insert('nbsp;',160);" />
-						  <button label="¡" tooltiptext="inverted exclamation mark" oncommand="html_entity_insert('iexcl',161);" />
-                          <button label="¤" tooltiptext="currency" oncommand="html_entity_insert('curren',164);" />
-                          <button label="¢" tooltiptext="cent" oncommand="html_entity_insert('cent',162);" />
-                        </row>
-                        <row>
-                          <button label="£" tooltiptext="pound" oncommand="html_entity_insert('pound',163);" />
-						  <button label="¥" tooltiptext="yen" oncommand="html_entity_insert('yen',165);" />
-                          <button label="¦" tooltiptext="broken vertical bar" oncommand="html_entity_insert('brvbar',166);" />
-                          <button label="§" tooltiptext="section" oncommand="html_entity_insert('sect',167);" />
-                        </row>
+                            <html:a class="html_entity-item" tooltiptext="non break space" onclick="html_entity_insert('nbsp',160);" >' '</html:a>
+                            <html:a class="html_entity-item" tooltiptext="inverted exclamation mark" onclick="html_entity_insert('iexcl',161);" >¡</html:a>
+                            <html:a class="html_entity-item" tooltiptext="currency" onclick="html_entity_insert('curren',164);" >¤</html:a>
+                            <html:a class="html_entity-item" tooltiptext="cent" onclick="html_entity_insert('cent',162);" >¢</html:a>
 
+                            <html:a class="html_entity-item" tooltiptext="pound" onclick="html_entity_insert('pound',163);" >£</html:a>
+                            <html:a class="html_entity-item" tooltiptext="yen" onclick="html_entity_insert('yen',165);" >¥</html:a>
+                            <html:a class="html_entity-item" tooltiptext="broken vertical bar" onclick="html_entity_insert('brvbar',166);" >¦</html:a>
+                            <html:a class="html_entity-item" tooltiptext="section" onclick="html_entity_insert('sect',167);" >§</html:a>
 
+                            <html:a class="html_entity-item" tooltiptext="section" onclick="html_entity_insert('sect',167);" >§</html:a>
 
-                      </rows>
-                    </grid>
+                        </box>
                     </groupbox>
-
-
-
                 </vbox>
             </vbox>
         </tabpanel>
