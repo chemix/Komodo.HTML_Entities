@@ -42,7 +42,7 @@
              tooltiptext="HTML Entities"/>
     </tabs>
     <tabpanels id="project_toolbox_tabpanels">
-        <tabpanel flex="1" id="html_entity-viewbox" insertafter="codebrowserviewbox">
+        <tabpanel flex="1" id="html_entity-viewbox" insertafter="codebrowserviewbox" style="overflow:auto">
             <vbox flex="1" id="html_entity-vbox">
                 <vbox flex="1">
                     <hbox align="center" id="html_entity-tabpanel-hbox">
@@ -55,9 +55,13 @@
                             />
                     </hbox>
 
+
+
+
+
                     <groupbox>
-                        <caption label="HTML Entities" />
-                        <box >
+                        <caption label="Html Entities" />
+                        <box  >
                             <html:table>
                                 <html:tr>
                                     <html:td>
@@ -214,59 +218,75 @@
 </html:tr>
 <html:tr>
 <html:td> <html:a class="html_entity-item" tooltiptext="Greek small letter omega" onclick="html_entity_insert('omega',969);" >ω</html:a> </html:td>
+<html:td> <html:a class="html_entity-item" tooltiptext="latin small letter sharp s" onclick="html_entity_insert('szlig',223);" >ß</html:a> </html:td>
+<html:td> <html:a class="html_entity-item" tooltiptext="latin capital letter A with diaeresis" onclick="html_entity_insert('Auml',196);" >Ä</html:a> </html:td>
+<html:td> <html:a class="html_entity-item" tooltiptext="latin small letter a with diaeresis" onclick="html_entity_insert('auml',228);" >ä</html:a> </html:td>
+<html:td> <html:a class="html_entity-item" tooltiptext="latin capital letter U with diaeresis" onclick="html_entity_insert('Uuml',220);" >Ü</html:a> </html:td>
+<html:td> <html:a class="html_entity-item" tooltiptext="latin small letter u with diaeresis" onclick="html_entity_insert('uuml',252);" >ü</html:a> </html:td>
+</html:tr>
+<html:tr>
+    <html:td> <html:a class="html_entity-item" tooltiptext="latin capital letter O with diaeresis" onclick="html_entity_insert('Ouml',214);" >Ö</html:a> </html:td>
+    <html:td> <html:a class="html_entity-item" tooltiptext="latin small letter o with diaeresis" onclick="html_entity_insert('ouml',246);" >ö</html:a> </html:td>
+    <html:td></html:td>
+    <html:td></html:td>
+    <html:td> <html:a class="html_entity-item" tooltiptext="en dash" onclick="html_entity_insert('ndash',8211);" >–</html:a> </html:td>
+    <html:td> <html:a class="html_entity-item" tooltiptext="em dash" onclick="html_entity_insert('mdash',8212);" >—</html:a> </html:td>
+</html:tr>
+
+<!--
 <html:td> <html:a class="html_entity-item" tooltiptext="zero width non-joiner" onclick="html_entity_insert('zwnj',8204);" >‌</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="zero width joiner" onclick="html_entity_insert('zwj',8205);" >‍</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="left-to-right mark" onclick="html_entity_insert('lrm',8206);" >‎</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="right-to-left mark" onclick="html_entity_insert('rlm',8207);" >‏</html:a> </html:td>
-<html:td> <html:a class="html_entity-item" tooltiptext="en dash" onclick="html_entity_insert('ndash',8211);" >–</html:a> </html:td>
-</html:tr>
+-->
+
 <html:tr>
-<html:td> <html:a class="html_entity-item" tooltiptext="em dash" onclick="html_entity_insert('mdash',8212);" >—</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="left single quotation mark" onclick="html_entity_insert('lsquo',8216);" >‘</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="right single quotation mark" onclick="html_entity_insert('rsquo',8217);" >’</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="single low-9 quotation mark" onclick="html_entity_insert('sbquo',8218);" >‚</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="left double quotation mark" onclick="html_entity_insert('ldquo',8220);" >“</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="right double quotation mark" onclick="html_entity_insert('rdquo',8221);" >”</html:a> </html:td>
+<html:td> <html:a class="html_entity-item" tooltiptext="double low-9 quotation mark" onclick="html_entity_insert('bdquo',8222);" >„</html:a> </html:td>
 </html:tr>
 <html:tr>
-<html:td> <html:a class="html_entity-item" tooltiptext="double low-9 quotation mark" onclick="html_entity_insert('bdquo',8222);" >„</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="dagger" onclick="html_entity_insert('dagger',8224);" >†</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="double dagger" onclick="html_entity_insert('Dagger',8225);" >‡</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="per mille sign" onclick="html_entity_insert('permil',8240);" >‰</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="single left-pointing angle quotation mark" onclick="html_entity_insert('lsaquo',8249);" >‹</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="single right-pointing angle quotation mark" onclick="html_entity_insert('rsaquo',8250);" >›</html:a> </html:td>
+<html:td> <html:a class="html_entity-item" tooltiptext="bullet (black small circle)" onclick="html_entity_insert('bull',8226);" >•</html:a> </html:td>
 </html:tr>
 <html:tr>
-<html:td> <html:a class="html_entity-item" tooltiptext="bullet (black small circle)" onclick="html_entity_insert('bull',8226);" >•</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="horizontal ellipsis (three dot leader)" onclick="html_entity_insert('hellip',8230);" >…</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="prime (minutes, feet)" onclick="html_entity_insert('prime',8242);" >′</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="double prime (seconds, inches)" onclick="html_entity_insert('Prime',8243);" >″</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="overline (spacing overscore)" onclick="html_entity_insert('oline',8254);" >‾</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="fraction slash" onclick="html_entity_insert('frasl',8260);" >⁄</html:a> </html:td>
+<html:td> <html:a class="html_entity-item" tooltiptext="euro sign" onclick="html_entity_insert('euro',8364);" >€</html:a> </html:td>
 </html:tr>
 <html:tr>
-<html:td> <html:a class="html_entity-item" tooltiptext="euro sign" onclick="html_entity_insert('euro',8364);" >€</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="trade mark sign" onclick="html_entity_insert('trade',8482);" >™</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="leftwards arrow" onclick="html_entity_insert('larr',8592);" >←</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="upwards arrow" onclick="html_entity_insert('uarr',8593);" >↑</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="rightwards arrow" onclick="html_entity_insert('rarr',8594);" >→</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="downwards arrow" onclick="html_entity_insert('darr',8595);" >↓</html:a> </html:td>
+<html:td> <html:a class="html_entity-item" tooltiptext="left right arrow" onclick="html_entity_insert('harr',8596);" >↔</html:a> </html:td>
 </html:tr>
 <html:tr>
-<html:td> <html:a class="html_entity-item" tooltiptext="left right arrow" onclick="html_entity_insert('harr',8596);" >↔</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="partial differential" onclick="html_entity_insert('part',8706);" >∂</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="n-ary product (product sign)" onclick="html_entity_insert('prod',8719);" >∏</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="n-ary summation" onclick="html_entity_insert('sum',8721);" >∑</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="minus sign" onclick="html_entity_insert('minus',8722);" >−</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="square root (radical sign)" onclick="html_entity_insert('radic',8730);" >√</html:a> </html:td>
+<html:td> <html:a class="html_entity-item" tooltiptext="infinity" onclick="html_entity_insert('infin',8734);" >∞</html:a> </html:td>
 </html:tr>
 <html:tr>
-<html:td> <html:a class="html_entity-item" tooltiptext="infinity" onclick="html_entity_insert('infin',8734);" >∞</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="intersection (cap)" onclick="html_entity_insert('cap',8745);" >∩</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="integral" onclick="html_entity_insert('int',8747);" >∫</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="almost equal to (asymptotic to)" onclick="html_entity_insert('asymp',8776);" >≈</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="not equal to" onclick="html_entity_insert('ne',8800);" >≠</html:a> </html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="identical to" onclick="html_entity_insert('equiv',8801);" >≡</html:a> </html:td>
+<html:td> </html:td>
 </html:tr>
 <html:tr>
 <html:td> <html:a class="html_entity-item" tooltiptext="less-than or equal to" onclick="html_entity_insert('le',8804);" >≤</html:a> </html:td>
@@ -277,13 +297,18 @@
 <html:td> <html:a class="html_entity-item" tooltiptext="black heart suit (valentine)" onclick="html_entity_insert('hearts',9829);" >♥</html:a> </html:td>
 </html:tr>
 <html:tr>
-<html:td><html:a class="html_entity-item" tooltiptext="black diamond suit" onclick="html_entity_insert('diams',9830);" >♦</html:a> </html:td>
-<html:td><html:a class="html_entity-item" tooltiptext="spacing diaeresis" onclick="html_entity_insert('uml',168);" >¨</html:a></html:td>
+<html:td> <html:a class="html_entity-item" tooltiptext="black diamond suit" onclick="html_entity_insert('diams',9830);" >♦</html:a> </html:td>
+<html:td> <html:a class="html_entity-item" tooltiptext="spacing diaeresis" onclick="html_entity_insert('uml',168);" >¨</html:a></html:td>
 <html:td> <html:a class="html_entity-item" tooltiptext="inverted exclamation mark" onclick="html_entity_insert('iexcl',161);" >¡</html:a> </html:td>
-<html:td></html:td>
+<html:td> </html:td>
 <html:td></html:td>
 <html:td></html:td>
 </html:tr>
+
+
+
+
+
 
                             </html:table>
                         </box>
