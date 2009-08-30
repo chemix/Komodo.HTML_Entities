@@ -74,7 +74,7 @@
                                         <html:a class="html_entity-item" tooltiptext="less-than" onclick="html_entity_insert('lt',60);" >&lt;</html:a>
                                     </html:td>
                                     <html:td>
-                                        <html:a class="html_entity-item" tooltiptext="greater-than" onclick="html_entity_insert('lt',62);" >&gt;</html:a>
+                                        <html:a class="html_entity-item" tooltiptext="greater-than" onclick="html_entity_insert('gt',62);" >&gt;</html:a>
                                     </html:td>
                                     <html:td>
                                         <html:a class="html_entity-item" tooltiptext="non break space" onclick="html_entity_insert('nbsp',160);" >' '</html:a>
