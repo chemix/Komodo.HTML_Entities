@@ -1,16 +1,31 @@
-.html_entity-item{
-    height: 15px;
-    width: 15px;
-    background: white;
-    border: 1px dotted #C5C1E9;
-    display: block;
-    float: left;
-    text-align: center;
-    padding: 2px;
-    margin: 0px;
+
+.html_entity-clear {
+	clear: both;
 }
+
+.html_entity-box_title {
+	font-weight: bold;
+	display: block;
+}
+
+.html_entity-box_wrapper {
+	display: block;
+}
+
+.html_entity-item{
+	height: 15px;
+	width: 15px;
+	background: white;
+	border: 1px dotted #C5C1E9;
+	display: inline-block;
+	text-align: center;
+	padding: 2px;
+	margin: 0px;
+}
+
 .html_entity-item:hover {
-    background: #8DAFDC;
-    color: white;
-    border: 1px solid #C5C1E9;
+	background: #8DAFDC;
+	color: white;
+	border: 1px solid #C5C1E9;
+	cursor:pointer;
 }

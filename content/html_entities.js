@@ -17,7 +17,6 @@ function NumberOrName()
 
 function html_entity_insert ( v_string , v_integer )
 {
-
     var is_number = false; // User String Entity or use number entity
 
     var scimoz = null;
