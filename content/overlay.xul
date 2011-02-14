@@ -34,13 +34,15 @@
     </menupopup>
 
 <!-- END Menu View	-->
-
-    <tabs id="project_toolbox_tabs">
-        <tab id="html_entities_tab" label="HTML Entities" insertafter="codebrowser_tab"
-             tooltiptext="HTML Entities"/>
+    <tabs id="right_toolbox_tabs">
+        <tab
+            id="html_entities_tab"
+            label="HTML Entities"
+            tooltiptext="HTML Entities"/>
     </tabs>
-    <tabpanels id="project_toolbox_tabpanels">
-        <tabpanel flex="1" id="html_entity-viewbox" insertafter="codebrowserviewbox" style="overflow:auto">
+
+    <tabpanels id="right_toolbox_tabpanels">
+        <tabpanel flex="1" id="html_entity-viewbox" style="overflow:auto">
             <vbox flex="1" id="html_entity-vbox">
                 <vbox flex="1">
                     <hbox align="center" id="html_entity-tabpanel-hbox">
